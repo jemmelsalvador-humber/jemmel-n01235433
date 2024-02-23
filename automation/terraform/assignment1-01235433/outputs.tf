@@ -19,6 +19,15 @@ output "nsg_name_output" {
 output "avs_linux_name_output" {
   value = module.vmlinux-01235433.avs_linux_output.name
 }
+output "law_name_output" {
+  value = module.common-01235433.law_output.name
+}
+output "rsv_name_output" {
+  value = module.common-01235433.rsv_output.name
+}
+output "sa_name_output" {
+  value = module.common-01235433.sa_output.name
+}
 output "vm_linux_hostnames_output" {
   value = module.vmlinux-01235433.vm_linux_hostname_output
 }

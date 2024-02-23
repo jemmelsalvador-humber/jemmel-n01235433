@@ -13,6 +13,14 @@ module "network-01235433" {
   subnet_space   = ["10.0.0.0/24"]
   nsg_name       = "n01235433-NSG"
 }
+module "common-01235433" {
+  source           = "./modules/common-01235433"
+  resource_group   = module.rgroup-01235433.rg_output.name
+  location         = module.rgroup-01235433.rg_output.location
+  rsv_sku          = "Standard"
+  sa_acct_tier     = "Standard"
+  sa_acct_rep_type = "LRS"
+}
 module "vmlinux-01235433" {
   source               = "./modules/vmlinux-01235433"
   nb_count             = "2"
