@@ -14,5 +14,5 @@ output "vm_win_public_ip_output" {
   value = [azurerm_windows_virtual_machine.n01235433-VMWIN[*].public_ip_address]
 }
 output "vm_win_ids_output" {
-  value = { for k, vm in azurerm_windows_virtual_machine.n01235433-VMWIN : "${var.vm_win_name}${k+1}" => vm.id }
+  value = { for k, vm in azurerm_windows_virtual_machine.n01235433-VMWIN : "${var.vm_win_name}${k + 1}" => vm.id }
 }

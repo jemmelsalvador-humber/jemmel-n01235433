@@ -16,11 +16,11 @@ resource "azurerm_lb" "n01235433-LB" {
   }
 }
 resource "azurerm_lb_backend_address_pool" "n01235433-LBBE" {
-  name                = "n01235433-LBBE"
-  loadbalancer_id     = azurerm_lb.n01235433-LB.id
+  name            = "n01235433-LBBE"
+  loadbalancer_id = azurerm_lb.n01235433-LB.id
 }
 resource "azurerm_network_interface_backend_address_pool_association" "n01235433-LBASSOC" {
-  for_each = var.vm_linux_nic_ids
+  for_each                = var.vm_linux_nic_ids
   network_interface_id    = each.value
   ip_configuration_name   = "${each.key}-ipconfig"
   backend_address_pool_id = azurerm_lb_backend_address_pool.n01235433-LBBE.id

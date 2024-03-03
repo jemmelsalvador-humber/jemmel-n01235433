@@ -52,9 +52,9 @@ resource "azurerm_linux_virtual_machine" "n01235433-VMLINUX" {
     storage_account_uri = var.storage_acct_uri
   }
   plan {
-    name = var.os_info_linux.offer
+    name      = var.os_info_linux.offer
     publisher = var.os_info_linux.publisher
-    product = var.os_info_linux.sku
+    product   = var.os_info_linux.sku
   }
 }
 resource "azurerm_virtual_machine_extension" "n01235433-NW" {

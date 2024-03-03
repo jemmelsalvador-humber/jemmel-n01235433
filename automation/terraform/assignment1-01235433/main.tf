@@ -87,16 +87,16 @@ module "vmwindows-01235433" {
   subnet_id        = module.network-01235433.subnet_output.id
 }
 module "datadisk-01235433" {
-  source             = "./modules/datadisk-01235433"
-  rg_name            = module.rgroup-01235433.rg_output.name
-  location           = module.rgroup-01235433.rg_output.location
-  vm_linux_ids       = module.vmlinux-01235433.vm_linux_ids_output
-  vm_win_ids         = module.vmwindows-01235433.vm_win_ids_output
-  storage_acct_type  = "Standard_LRS"
-  create_opt         = "Empty"
-  disk_size_gb       = "10"
-  lun                = "10"
-  caching            = "ReadWrite"
+  source            = "./modules/datadisk-01235433"
+  rg_name           = module.rgroup-01235433.rg_output.name
+  location          = module.rgroup-01235433.rg_output.location
+  vm_linux_ids      = module.vmlinux-01235433.vm_linux_ids_output
+  vm_win_ids        = module.vmwindows-01235433.vm_win_ids_output
+  storage_acct_type = "Standard_LRS"
+  create_opt        = "Empty"
+  disk_size_gb      = "10"
+  lun               = "10"
+  caching           = "ReadWrite"
 }
 module "loadbalancer-01235433" {
   source           = "./modules/loadbalancer-01235433"
