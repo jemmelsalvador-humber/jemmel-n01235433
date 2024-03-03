@@ -14,3 +14,5 @@ variable "db_version" {}
 variable "db_ssl_enforcement_enabled" {}
 variable "db_charset" {}
 variable "db_collation" {}
+variable "db_admin_login" {}
+variable "db_admin_pw" {}

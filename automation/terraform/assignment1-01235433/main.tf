@@ -114,4 +114,6 @@ module "database-01235433" {
   db_ssl_enforcement_enabled = true
   db_charset                 = "UTF8"
   db_collation               = "English_United States.1252"
+  db_admin_login             = "admin"
+  db_admin_pw                = "P@ssw0rd!"
 }
