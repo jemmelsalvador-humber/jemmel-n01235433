@@ -6,26 +6,19 @@ locals {
     Environment    = "Learning"
   }
 }
+variable "nb_count" {}
 variable "rg_name" {}
 variable "location" {}
-variable "avs_linux" {}
-variable "size_linux" {}
-variable "admin_username_linux" {}
-variable "public_key" {}
-variable "priv_key" {}
-variable "vm_linux_name" {
+variable "avs_win" {}
+variable "size_win" {}
+variable "vm_win_name" {}
+variable "os_disk_attr_win" {
   type = map(string)
 }
-variable "os_disk_attr_linux" {
-  type = map(string)
-}
-variable "os_info_linux" {
+variable "os_info_win" {
   type = map(string)
 }
 variable "storage_acct_uri" {}
-variable "nw_pub" {}
-variable "nw_type" {}
-variable "nw_type_hand" {}
 variable "am_pub" {}
 variable "am_type" {}
 variable "am_type_hand" {}

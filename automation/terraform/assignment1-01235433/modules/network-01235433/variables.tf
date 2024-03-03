@@ -6,7 +6,7 @@ locals {
     Environment    = "Learning"
   }
 }
-variable "resource_group" {}
+variable "rg_name" {}
 variable "location" {}
 variable "vnet_name" {}
 variable "vnet_space" {}

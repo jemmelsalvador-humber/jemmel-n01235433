@@ -40,19 +40,24 @@ output "vm_linux_private_ips_output" {
 output "vm_linux_public_ips_output" {
   value = module.vmlinux-01235433.vm_linux_public_ip_output
 }
-/*output "avs_win_name_output" {
-  value = module.windows.avs_win_output.name
+output "avs_win_name_output" {
+  value = module.vmwindows-01235433.avs_win_output.name
 }
 output "vm_win_hostnames_output" {
-  value = module.windows.vm_win_hostname_output
+  value = module.vmwindows-01235433.vm_win_hostname_output
 }
 output "vm_win_fqdns_output" {
-  value = module.windows.vm_win_fqdn_output
+  value = module.vmwindows-01235433.vm_win_fqdn_output
 }
 output "vm_win_private_ips_output" {
-  value = module.windows.vm_win_private_ip_output
+  value = module.vmwindows-01235433.vm_win_private_ip_output
 }
 output "vm_win_public_ips_output" {
-  value = module.windows.vm_win_public_ip_output
+  value = module.vmwindows-01235433.vm_win_public_ip_output
 }
-*/
+output "lb_name_output" {
+  value = module.loadbalancer-01235433.lb_output.name
+}
+output "pgsql_name_output" {
+  value = module.database-01235433.pgsql_output.name
+}

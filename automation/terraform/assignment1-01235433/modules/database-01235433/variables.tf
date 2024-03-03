@@ -8,6 +8,9 @@ locals {
 }
 variable "rg_name" {}
 variable "location" {}
-variable "rsv_sku" {}
-variable "sa_acct_tier" {}
-variable "sa_acct_rep_type" {}
+variable "db_sku_name" {}
+variable "db_storage_mb" {}
+variable "db_version" {}
+variable "db_ssl_enforcement_enabled" {}
+variable "db_charset" {}
+variable "db_collation" {}

@@ -8,6 +8,6 @@ locals {
 }
 variable "rg_name" {}
 variable "location" {}
-variable "rsv_sku" {}
-variable "sa_acct_tier" {}
-variable "sa_acct_rep_type" {}
+variable "vm_linux_nic_ids" {
+  type = map(string)
+}

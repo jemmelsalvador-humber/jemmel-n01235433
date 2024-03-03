@@ -7,7 +7,7 @@ resource "null_resource" "linux-provisioner" {
       type        = "ssh"
       user        = var.admin_username_linux
       private_key = file(var.priv_key)
-      host        = "${each.key}-pip"
+      host        = azurerm_public_ip.n01235433-PIPLINUX[each.key].fqdn
     }
   }
 }

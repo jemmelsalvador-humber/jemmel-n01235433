@@ -1,19 +1,19 @@
 resource "azurerm_virtual_network" "n01235433-VNET" {
   name                = var.vnet_name
-  resource_group_name = var.resource_group
+  resource_group_name = var.rg_name
   location            = var.location
   address_space       = var.vnet_space
   tags                = local.common_tags
 }
 resource "azurerm_subnet" "n01235433-SUBNET" {
   name                 = var.subnet_name
-  resource_group_name  = var.resource_group
+  resource_group_name  = var.rg_name
   virtual_network_name = azurerm_virtual_network.n01235433-VNET.name
   address_prefixes     = var.subnet_space
 }
 resource "azurerm_network_security_group" "n01235433-NSG" {
   name                = var.nsg_name
-  resource_group_name = var.resource_group
+  resource_group_name = var.rg_name
   location            = var.location
   tags                = local.common_tags
   security_rule {
@@ -29,7 +29,7 @@ resource "azurerm_network_security_group" "n01235433-NSG" {
   }
   security_rule {
     name                       = "rule2-5433"
-    priority                   = 100
+    priority                   = 200
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
@@ -40,7 +40,7 @@ resource "azurerm_network_security_group" "n01235433-NSG" {
   }
   security_rule {
     name                       = "rule3-5433"
-    priority                   = 100
+    priority                   = 300
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
@@ -51,7 +51,7 @@ resource "azurerm_network_security_group" "n01235433-NSG" {
   }
   security_rule {
     name                       = "rule4-5433"
-    priority                   = 100
+    priority                   = 400
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
