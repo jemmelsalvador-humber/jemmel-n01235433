@@ -39,3 +39,9 @@ terraform_logs/
 
 # Ignore earlier labs
 lab**/
+
+# Ignore ansible
+
+ansible**
+
+**/.terraform.lock.hcl
